@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rvMessages"
+        android:layout_weight="1" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:layout_margin="@dimen/ViewMarginSmall">
+        <EditText
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtContent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:inputType="textMultiLine"
+            android:layout_marginLeft="@dimen/ViewMarginSmall" />
+        <ImageButton
+            android:src="@drawable/send"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnSend"
+            android:background="@null"
+            android:layout_marginLeft="@dimen/ViewMarginSmall"
+            android:layout_marginRight="@dimen/ViewMarginSmall" />
+    </LinearLayout>
+</LinearLayout>

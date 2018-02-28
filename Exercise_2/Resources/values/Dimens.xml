@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <dimen name="LayoutPadding">30dp</dimen>
+  <dimen name="ViewMarginSmall">10dp</dimen>
+  <dimen name="ViewMarginMedium">25dp</dimen>
+  <dimen name="ViewMarginLarge">50dp</dimen>
+</resources>
