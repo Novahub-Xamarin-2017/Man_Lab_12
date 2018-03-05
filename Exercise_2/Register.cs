@@ -48,7 +48,6 @@ namespace Exercise_2
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Register);
             Cheeseknife.Inject(this);
-            // Create your application here
         }
     }
 }

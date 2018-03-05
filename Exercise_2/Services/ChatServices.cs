@@ -6,15 +6,29 @@ namespace Exercise_2.Services
 {
     public class ChatServices
     {
-        private const string RootUrl = "localhost:56301";
-
-        private readonly RestClient client = new RestClient(RootUrl);
-
+        public ChatServices()
+        {
+            SimpleJson.SimpleJson.CurrentJsonSerializerStrategy = new CamelCaseSerializerStrategy();
+        }
+        
+        private readonly RestClient client = new RestClient("http://192.168.42.227");
+        
         public bool SignUp(SignUpForm signUpForm)
         {
             var request = new RestRequest("/api/chats/signup", Method.POST);
             request.AddHeader("Content-Type", "application/json");
+            request.RequestFormat = DataFormat.Json;
             request.AddBody(signUpForm);
+            var response = client.Execute(request);
+            return response.StatusCode == HttpStatusCode.OK;
+        }
+
+        public bool SignIn(SignInForm signInForm)
+        {
+            var request = new RestRequest("/api/chats/signin", Method.POST);
+            request.AddHeader("Content-Type", "application/json");
+            request.RequestFormat = DataFormat.Json;
+            request.AddJsonBody(signInForm);
             var response = client.Execute(request);
             return response.StatusCode == HttpStatusCode.OK;
         }
