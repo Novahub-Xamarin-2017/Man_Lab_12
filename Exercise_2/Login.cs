@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Net;
 using Android.App;
 using Android.OS;
 using Android.Widget;
 using Exercise_2.Models;
 using Exercise_2.Services;
-using Firebase.Iid;
-using RestSharp;
 
 namespace Exercise_2
 {
@@ -32,10 +29,13 @@ namespace Exercise_2
             {
                 UserName = edtUser.Text,
                 Password = edtPassword.Text,
-                FirebaseToken = ""
+                FirebaseToken = DataManager.GetInstance.AppData.FirebaseToken
             };
             if (services.SignIn(signInForm))
+            {
+                DataManager.GetInstance.AppData.LoggedStatus = true;
                 StartActivity(typeof(Chat));
+            }
             else
                 Toast.MakeText(this, "Login Failed", ToastLength.Short).Show();
         }
@@ -45,6 +45,11 @@ namespace Exercise_2
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Login);
             Cheeseknife.Inject(this);
+        }
+
+        public override void OnBackPressed()
+        {
+
         }
     }
 }

@@ -1,10 +1,9 @@
-﻿using Newtonsoft.Json;
-
-namespace Exercise_2.Models
+﻿namespace Exercise_2.Models
 {
     public class AppData
     {
-        [JsonProperty("is_logged_in")]
-        public bool IsLoggedIn { get; set; }
+        public bool LoggedStatus { get; set; }
+
+        public string FirebaseToken { get; set; }
     }
 }

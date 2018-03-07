@@ -11,7 +11,7 @@ namespace Exercise_2.Services
             SimpleJson.SimpleJson.CurrentJsonSerializerStrategy = new CamelCaseSerializerStrategy();
         }
         
-        private readonly RestClient client = new RestClient("http://192.168.42.227");
+        private readonly RestClient client = new RestClient("http://192.168.1.108");
         
         public bool SignUp(SignUpForm signUpForm)
         {

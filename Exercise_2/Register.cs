@@ -35,7 +35,7 @@ namespace Exercise_2
             };
             if (services.SignUp(signUpForm))
             {
-                Toast.MakeText(this, "Sign Up Successfully", ToastLength.Short).Show();
+                Finish();
             }
             else
             {

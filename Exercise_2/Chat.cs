@@ -12,5 +12,9 @@ namespace Exercise_2
             SetContentView(Resource.Layout.ChatLayout);
             // Create your application here
         }
+
+        public override void OnBackPressed()
+        {
+        }
     }
 }
