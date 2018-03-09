@@ -1,4 +1,5 @@
-﻿using Exercise_2.Models;
+﻿using System.Collections.Generic;
+using Exercise_2.Models;
 using Firebase.Iid;
 
 namespace Exercise_2.Services
@@ -11,10 +12,11 @@ namespace Exercise_2.Services
 
         private DataManager()
         {
-            AppData = new AppData()
+            AppData = new AppData
             {
                 LoggedStatus = false,
-                FirebaseToken = FirebaseInstanceId.Instance.Token
+                FirebaseToken = FirebaseInstanceId.Instance.Token,
+                Messages = new List<string>()
             };
         }
 
