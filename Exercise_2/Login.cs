@@ -34,6 +34,7 @@ namespace Exercise_2
             if (services.SignIn(signInForm))
             {
                 DataManager.GetInstance.AppData.LoggedStatus = true;
+                DataManager.GetInstance.AppData.UserName = signInForm.UserName;
                 StartActivity(typeof(Chat));
             }
             else

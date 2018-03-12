@@ -12,7 +12,6 @@ namespace Exercise_2
         {
             base.OnCreate(savedInstanceState);
             var dataManager = DataManager.GetInstance;
-            Log.Info("Token", dataManager.AppData.FirebaseToken);
             StartActivity(dataManager.AppData.LoggedStatus ? typeof(Chat) : typeof(Login));
         }
     }

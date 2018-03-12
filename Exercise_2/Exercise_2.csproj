@@ -158,11 +158,13 @@
     <Compile Include="Cheeseknife.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MessageBroadcastReceiver.cs" />
     <Compile Include="Models\AppData.cs" />
     <Compile Include="Models\CamelCaseSerializerStrategy.cs" />
     <Compile Include="Models\SignInForm.cs" />
     <Compile Include="Models\SignUpForm.cs" />
     <Compile Include="MyFirebaseIIDService.cs" />
+    <Compile Include="MyFirebaseMessagingService.cs" />
     <Compile Include="Register.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
